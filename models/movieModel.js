@@ -10,7 +10,6 @@ const movieSchema = new mongoose.Schema(
         },
         tahunRilis : {
             type : String,
-            unique : true,
             required : true,
             trim : true
         },
@@ -25,6 +24,6 @@ const movieSchema = new mongoose.Schema(
         timestamps : true
     }    
 );
-    const movieModel = mongoose.model ("movie", movieSchema)
+    const movieModel = mongoose.model ("Movie", movieSchema)
 
     export default movieModel

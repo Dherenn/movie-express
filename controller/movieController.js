@@ -41,9 +41,9 @@ export const updateMovie = async (req,res) => {
         const request = req.body
 
         if(!id){
-            return res.status(500).json({
-                message : "Data Film Wajib Diisi",
-                data: response
+            return res.status(400).json({
+                message : "Data Buku Wajib Diisi",
+                data: null
             })
         }
         console.log(request)
@@ -55,18 +55,18 @@ export const updateMovie = async (req,res) => {
 
         if(!response){
             return res.status(500).json({
-                message: "Data Film Gagal Diupdate :'(",
+                message: "Data Buku Gagal Diupdate :'(",
                 data: response
             })
         }
 
         return res.status(200).json({
-            message: "Data Film Berhasil Diupdate :D"
+            message: "Data Buku Berhasil Diupdate :D"
         })
 
     }catch (error){
         res.status(500).json({
-            message: error,
+            message: error.message,
             data: null
         })
     }
