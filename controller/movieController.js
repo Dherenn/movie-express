@@ -1,5 +1,5 @@
 import movieModel from "../models/movieModel.js";
-import { response } from "express";
+
 
 export const listMovie = async (req,res) => {
     try{const data = await movieModel.find({})
