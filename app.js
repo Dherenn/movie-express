@@ -3,6 +3,7 @@ import api from "./routes/api.js"
 import database from "./config/database.js"
 import cors from "cors"
 
+
 const app = express();
 
 app.use (express.json())
