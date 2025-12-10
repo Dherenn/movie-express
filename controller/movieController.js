@@ -24,7 +24,9 @@ export const listMovie = async (req,res) => {
 export const createMovie = async (req,res)=>{
     try{
         const {judul, tahunRilis, sutradara} = req.body;
-        if (!judul || !tahunRilis || sutradara){
+        console.log(req.body);
+        
+        if (!judul || !tahunRilis || !sutradara){
             return res.status(400).json({
                 message: "Semua Field Wajib Diisi!",
                 data:null
